@@ -277,6 +277,7 @@ client.on('group-participants-update', async (anu) => {
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			
 			switch(command) {
+					
                                 case 'playstore':
 
 					kuji = body.slice(7)
@@ -290,19 +291,9 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, anu, image, {quoted: mek, caption: capty})
 
 					break
-				
-                                case 'lovemake':
 
-              	                        if (args.length < 1) return reply('teksnya mana kak?')                    teks = `${body.slice(8)}`
 
-                                        if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
 
-                                        buff = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
-
-                                        client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
-                                        
-                                        break
-			     	
 	
                                  case 'nulis':
 
