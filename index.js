@@ -277,9 +277,9 @@ client.on('group-participants-update', async (anu) => {
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			
 			switch(command) {
-case 'nulis':
 
-				case 'tulis':
+
+				case 'nulis':
 
 					if (args.length < 1) return reply('Yang mau di tulis apaan?')
 
