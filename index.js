@@ -278,8 +278,8 @@ client.on('group-participants-update', async (anu) => {
 			
 			switch(command) {
 
-
-				case 'nulis':
+                                case 'nulis':
+				case 'tulis':
 
 					if (args.length < 1) return reply('Yang mau di tulis apaan?')
 
