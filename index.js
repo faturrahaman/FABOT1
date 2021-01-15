@@ -278,21 +278,7 @@ client.on('group-participants-update', async (anu) => {
 			
 			switch(command) {
 
-                                case 'nulis':
-				case 'tulis':
-
-					if (args.length < 1) return reply('Yang mau di tulis apaan?')
-
-					tulis = body.slice(6)
-
-					reply(mess.wait)
-
-					buffer = await getBuffer(`https://api.vhtear.com/write?text=${tulis}&apikey=ANTIGRATISNIHANJENKKK`)
-
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ketahuan guru mampus lu'})
-
-					break
-					
+				
 					
 				case 'bisakah':
 					bisakah = body.slice(1)
