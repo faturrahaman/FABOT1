@@ -277,6 +277,23 @@ client.on('group-participants-update', async (anu) => {
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			
 			switch(command) {
+case 'nulis':
+
+				case 'tulis':
+
+					if (args.length < 1) return reply('Yang mau di tulis apaan?')
+
+					tulis = body.slice(6)
+
+					reply(mess.wait)
+
+					buffer = await getBuffer(`https://api.vhtear.com/write?text=${tulis}&apikey=ANTIGRATISNIHANJENKKK`)
+
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ketahuan guru mampus lu'})
+
+					break
+					
+					
 				case 'bisakah':
 					bisakah = body.slice(1)
 					const bisa =['Bisa','Tidak Bisa','Coba Ulangi']
