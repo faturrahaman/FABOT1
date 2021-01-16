@@ -30,7 +30,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:Fatur Admin\n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6281315995628:+62 813-1599-5628\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6281315995628:+62 21-1848-4363\n' 
             + 'END:VCARD' 
 prefix = '#'
 blocked = []          
