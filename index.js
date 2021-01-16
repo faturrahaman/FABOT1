@@ -277,6 +277,39 @@ client.on('group-participants-update', async (anu) => {
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			
 			switch(command) {
+                                case 'openanime':
+
+					if (!isGroup) return reply(mess.only.group)
+
+					if (!isGroupAdmins) return reply(mess.only.admin)
+
+					if (args.length < 1) return reply('Hmmmm')
+
+					if (Number(args[0]) === 1) {
+
+						if (isAnime) return reply('Mode anime sudah aktif')
+
+						anime.push(from)
+
+						fs.writeFileSync('./src/anime.json', JSON.stringify(anime))
+
+						reply('Sukses mengaktifkan mode anime di group ini ✔️')
+
+					} else if (Number(args[0]) === 0) {
+
+						anime.splice(from, 1)
+
+						fs.writeFileSync('./src/anime.json', JSON.stringify(anime))
+
+						reply('Sukes menonaktifkan mode anime di group ini ✔️')
+
+					} else {
+
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
+
+					}
+
+					break
 				case 'bisakah':
 					bisakah = body.slice(1)
 					const bisa =['Bisa','Tidak Bisa','Coba Ulangi']
