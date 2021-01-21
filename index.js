@@ -367,7 +367,7 @@ client.on('group-participants-update', async (anu) => {
 					const pref = `Usage: \n${prefix}quotemaker teks|watermark|theme\n\nEx :\n${prefix}quotemaker ini contoh|bicit|random`
 					if (args.length < 1) return reply(pref)
 					reply(mess.wait)
-					anu = await fetchJson(`https://terhambar.com/aw/qts/?kata=${quote}&author=${wm}&tipe=${bg}`, {method: 'get'})
+					anu = await fetchJson(`https://VhtearsKey.com/aw/qts/?kata=${quote}&author=${wm}&tipe=${bg}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {caption: 'Nih anjim', quoted: mek})
 					break
@@ -377,7 +377,7 @@ client.on('group-participants-update', async (anu) => {
 					var gbl2 = gh.split("|")[1];
 					if (args.length < 1) return reply('Teksnya mana um')
 					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/textpro?theme=pornhub&text1=${gbl1}&text2=${gbl2}`, {method: 'get'})
+					anu = await fetchJson(`https://VhtearsKey.com/api/textpro?theme=pornhub&text1=${gbl1}&text2=${gbl2}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
@@ -396,14 +396,14 @@ client.on('group-participants-update', async (anu) => {
 				case 'waifu':
 				   if (!isGroup) return reply(mess.only.group)
                    if (!isNsfw) return reply('nsfw gak aktif')
-				   anu = await fetchJson(`https://arugaz.herokuapp.com/api/waifu`)
+				   anu = await fetchJson(`https://VhtearsKey.com/api/waifu`)
 				   buf = await getBuffer(anu.image)
 				   texs = ` *anime name* : ${anu.name} \n*deskripsi* : ${anu.desc} \n*source* : ${anu.source}`
 				   client.sendMessage(from, buf, image, { quoted: mek, caption: `${texs}` })
 				break
                 case 'imoji':
 					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/emoji2png?emoji=`, {method: 'get'})
+					anu = await fetchJson(`https://VhtearsKey.herokuapp.com/api/emoji2png?emoji=`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
@@ -412,13 +412,13 @@ client.on('group-participants-update', async (anu) => {
 				   if (!isGroup) return reply(mess.only.group)
                    if (!isNsfw) return reply('nsfw gak aktif')
 					teks = body.slice(7)
-					anu = await fetchJson(`https://mnazria.herokuapp.com/api/anime?query=${teks}`, {method: 'get'})
+					anu = await fetchJson(`https://VhtearsKey.com/api/anime?query=${teks}`, {method: 'get'})
 					reply('anime nya ni '+teks+' adalah :\n\n'+anu.title)
 					break
                 case 'neko':
                    if (!isGroup) return reply(mess.only.group)
                    if (!isNsfw) return reply('nsfw gak aktif')
-                    anu = await fetchJson(`https://arugaz.herokuapp.com/api/nekonime` , {method: 'get'})
+                    anu = await fetchJson(`https://VhtearsKey.com/api/nekonime` , {method: 'get'})
                     buf = await getBuffer(anu.result)
                     client.sendMessage(from, buf, image, { quoted: mek, caption: 'ih wibu'})
                 break
@@ -426,7 +426,7 @@ client.on('group-participants-update', async (anu) => {
                    if (!isGroup) return reply(mess.only.group)
                    if (!isNsfw) return reply('nsfw gak aktif')
                     teks = body.slice(11)
-                    anu = await fetchJson(`https://arugaz.herokuapp.com/api/dewabatch?q=${teks}` , {method: 'get'})
+                    anu = await fetchJson(`https://.VhtearsKeycom/api/dewabatch?q=${teks}` , {method: 'get'})
                     thum = await getBuffer(anu.thumb)
                     client.sendMessage(from, thum, image, {quoted: mek, caption: `${anu.result}`})
                  break
