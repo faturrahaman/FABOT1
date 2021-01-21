@@ -277,6 +277,21 @@ client.on('group-participants-update', async (anu) => {
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			
 			switch(command) {
+					case 'randomhentai':
+				    try {
+					if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+					
+					if (!isPremium) return reply(mess.only.premium)
+						if (!isNsfw) return reply('âŒ *NSFW MATI* âŒ')
+						res = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=BotWeA`, {method: 'get'})
+						bufferxx = await getBuffer(res.result)
+						client.sendMessage(from, bufferxx, image, {quoted: mek, caption: 'hentai teros'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('âŒ *ERROR* âŒ')
+					}
+					break
 				case 'bisakah':
 					bisakah = body.slice(1)
 					const bisa =['Bisa','Tidak Bisa','Coba Ulangi']
