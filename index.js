@@ -284,7 +284,7 @@ client.on('group-participants-update', async (anu) => {
 					
 					if (!isPremium) return reply(mess.only.premium)
 						if (!isNsfw) return reply('âŒ *NSFW MATI* âŒ')
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=BotWeA`, {method: 'get'})
+						res = await fetchJson(`https://VhtearsKey.com/api/hentai?apikey=BotWeA`, {method: 'get'})
 						bufferxx = await getBuffer(res.result)
 						client.sendMessage(from, bufferxx, image, {quoted: mek, caption: 'hentai teros'})
 					} catch (e) {
